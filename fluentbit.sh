@@ -1,5 +1,5 @@
 #!/bin/bash
-ClusterName=education-eks-qxqhD9N1
+ClusterName=<ADD_CLUSTER_NAME>
 RegionName=us-east-2
 FluentBitHttpPort='2020'
 FluentBitReadFromHead='Off'

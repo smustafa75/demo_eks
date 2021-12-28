@@ -37,3 +37,5 @@ kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | gre
 
 - Click on **Token** and paste the token to login into dashboard
 
+**Update** 28 Dec, 2021
+- Added FLUEINTBIT.SH, once cluster is up execute it to get metrics in CloudWatch. Be sure to replace clustername and region.
