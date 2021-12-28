@@ -25,10 +25,11 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-b
 ### Launch Dashboard locally
 
 kubectl proxy
+
 In browser type below URL  
 http://127.0.0.1:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
 
-Note:- It will keep running until u press Ctrl+C
+Note:- The proxy command shall keep running until u press Ctrl+C
 
 ### How to Login
 Launch a separate window
@@ -39,3 +40,11 @@ kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | gre
 
 **Update** 28 Dec, 2021
 - Added FLUEINTBIT.SH, once cluster is up execute it to get metrics in CloudWatch. Be sure to replace clustername and region.
+- By default, the IAM Role for EKS does not have logging enabled in the policy so you have to do it manually. In addition do add CloudwatchFullAccess policy.
+- Attach CloudWatchFullAccess policy to the IAM role created for EC2 instances as well.
+
+**Testing fun**
+- Add two cron jobs and see the fun on CloudWatch Insights
+
+kubectl create cronjob hello --image=busybox   --schedule="*/1 * * * *" -- echo "hello World"
+kubectl create cronjob bye --image=busybox   --schedule="*/2 * * * *" -- echo "Bye World"

@@ -1,5 +1,5 @@
 #!/bin/bash
-ClusterName=<ADD_CLUSTER_NAME>
+ClusterName=<CLUSTERNAME>
 RegionName=us-east-2
 FluentBitHttpPort='2020'
 FluentBitReadFromHead='Off'
