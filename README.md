@@ -46,5 +46,5 @@ kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | gre
 **Testing fun**
 - Add two cron jobs and see the fun on CloudWatch Insights
 
-kubectl create cronjob hello --image=busybox   --schedule="*/1 * * * *" -- echo "hello World"
-kubectl create cronjob bye --image=busybox   --schedule="*/2 * * * *" -- echo "Bye World"
+a. kubectl create cronjob hello --image=busybox   --schedule="*/1 * * * *" -- echo "hello World"
+b. kubectl create cronjob bye --image=busybox   --schedule="*/2 * * * *" -- echo "Bye World"
