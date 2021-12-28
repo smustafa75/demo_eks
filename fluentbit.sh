@@ -1,3 +1,4 @@
+#!/bin/bash
 ClusterName=education-eks-qxqhD9N1
 RegionName=us-east-2
 FluentBitHttpPort='2020'
